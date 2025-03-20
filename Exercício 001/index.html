@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <title>Primeiros passos</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>TORTILLAS MEXICAN GRILL</h1>
+           
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <nav class="menu">
+                <button class="close-btn" onclick="toggleMenu()">✖</button>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Cardápio</a></li>
+                    <li><a href="francisco/contacto.html" target="_parent">Contacte-nos</a></li>
+                </ul>
+            </nav>
+            <header>
+                <div class="slider">
+                    <div class="slides">
+                        <img src="img1.jpg" class="slide active">
+                        <div class="texte1">O verdadeiro sabor do México!</div>
+                        <img src="imagem2.jpeg" class="slide">
+                        <div class="texte2">O verdadeiro sabor do México!</div>
+                        <img src="imagem3.jpg" class="slide">
+                        <div class="texte3">O verdadeiro sabor do México!</div>
+                        <img src="imagem4.jpeg" class="slide">
+                        <div class="texte4">O verdadeiro sabor do México!</div>
+                    </div>
+                </div>
+                
+               
+      
+    </main>
+    <section id="inicio" class="hero">
+        <h2>Bem-vindo ao Restaurante Mexicano 🌮🔥</h2>
+        <p>Descubra os autênticos sabores do México em um ambiente acolhedor e cheio de tradição.</p>
+        <img src="casa.jpg" alt="">
+        
+        <p>
+            A Autenticidade da Comida Mexicana 🌮
+            <p>
+                A culinária
+                 mexicana é uma explosão de sabores, cores e tradição! Com influências indígenas e espanholas, a gastronomia do México é reconhecida mundialmente por seus temperos marcantes e ingredientes frescos.
+            </p>
+        </p>
+        <img src="taco.jpg" alt="">
+        <p></p>
+        <img src="bebida1.jpg" alt="">
+
+        Pratos Típicos Que Encantam o Paladar
+<h2>🌮 Tacos <img src="taco1.jpg" alt=""></h2>
+O clássico mexicano! Feitos com tortilhas de milho ou trigo, os tacos podem ser recheados com carne, frango, peixe ou até opções vegetarianas, sempre acompanhados de molhos e guacamole.
+
+<h2>🌯 Burritos</h2>
+Enrolados em uma macia tortilha de trigo, os burritos são recheados com arroz, feijão, carne e queijo, criando uma combinação perfeita de sabor e textura.
+
+<h2>🥑 Guacamole</h2>
+Uma das receitas mais populares do México, feita com abacate amassado, tomate, cebola, coentro e um toque de limão. Ideal para acompanhar nachos e tacos!
+
+<h2>🌶️ Chili com Carne</h2>
+Um prato robusto e apimentado, feito com carne moída, feijão, tomate e pimentas mexicanas. É um verdadeiro conforto para os amantes de comida quente e saborosa!
+
+
+<h1>Os Temperos Que Fazem a Diferença</h1>
+Os ingredientes típicos da comida mexicana garantem seu sabor inconfundível:
+✅ <h2>Pimenta jalapeño e habanero</h2> – O toque picante essencial.
+✅ <h2>Coentro e limão</h2> – Frescor em cada prato.
+✅ <h2>Queijo e creme de leite</h2> – Para equilibrar os sabores intensos.
+✅ <h2>Feijão e milho</h2> – Base da alimentação mexicana.
+
+<h1>Uma Experiência Inesquecível</h1>
+A comida mexicana não é apenas uma refeição, mas uma verdadeira experiência cultural. Nas Tortillas Mexican Grill, trazemos para você o sabor autêntico do México, com ingredientes selecionados e receitas tradicionais.
+
+🌟 Venha provar o verdadeiro México no seu prato! 🌮🔥
+    </section>
+    <h1 style="color: #04babf; text-align: center;">O que os clientes falam sobre nós</h1>
+    <section class="depoimentos">
+       
+        <div class="depoimento">
+          <p>"Melhor comida mexicana que já provei!"</p>
+          <h4>- Cliente Satisfeito</h4>
+        </div>
+        <div class="depoimento">
+          <p>"Atendimento incrível e comida deliciosa!"</p>
+          <h4>- João Silva</h4>
+        </div>
+      </section>
+      <footer class="footer">
+        <p>&copy; 2025 Tortillas Mexican Grill. Todos os direitos reservados.</p>
+      </footer>
+      
+      
+    <script>function toggleMenu() {
+        let menu = document.querySelector(".menu");
+        menu.classList.toggle("show");
+    }
+    
+    
+        let currentIndex = 0;
+let slides = document.querySelectorAll(".slide");
+
+function nextSlide() {
+    slides[currentIndex].classList.remove("active"); // Esconde a imagem atual
+    currentIndex = (currentIndex + 1) % slides.length; // Passa para a próxima
+    slides[currentIndex].classList.add("active"); // Mostra a nova imagem
+}
+
+// Troca de imagem a cada 5 segundos (mais lento)
+setInterval(nextSlide, 5000);
+
+    </script>
+</body>
+</html>

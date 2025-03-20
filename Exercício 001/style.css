@@ -1,0 +1,309 @@
+@charset "UTF-8";
+@font-face {
+    font-family:"Parisienne", cursive;
+    src: url(Parisienne-Regular.ttf); }
+
+    @font-face {
+        font-family: "Italianno", cursive;
+        src: url(Italianno-Regular.ttf);
+    }
+    @font-face {
+        font-family: "Playpen Sans", cursive;;
+        src: url(PlaypenSans-VariableFont_wght.ttf);
+    }
+    @keyframes deslizar {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+    }
+    @keyframes vibrar {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-2px); }
+        50% { transform: translateX(2px); }
+        75% { transform: translateX(-2px); }
+        100% { transform: translateX(0); }  }
+body{
+   margin: 0%;
+
+}
+header{
+
+   
+background-color: rgb(255, 145, 0);
+color: white;
+box-shadow: 5px 5px 15px black;
+
+
+}
+
+header>h1{
+    font-family:"Parisienne", cursive;
+    color: #591902; 
+
+   text-align: center;
+   margin: 0%;
+   text-shadow: 3px 3px 3px   rgba(0, 0, 0, 0.377) ;
+}
+header>h2{
+    font-size: 1em;
+    text-align: center;
+    text-shadow: 2px 2px 2px   rgba(0, 0, 0, 0.377) ;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .8em;
+    color: rgb(124, 59, 6);
+    padding: 5px;
+    margin-right: 10px;
+    transition-duration: 1s;
+   
+    
+}
+nav a:hover{
+    background-color: rgb(158, 138, 27);
+}
+.red{
+     font-family: "Italianno", cursive;
+    color: red;
+    font-weight: 100;
+    
+}
+.green{
+    font-family: "Italianno", cursive;
+    color: green;
+    font-weight: 100;
+   
+}
+.branca{
+    font-family: "Italianno", cursive;
+    color: white;
+    font-weight: 100;
+   
+}
+.menu-btn{
+    background-color: rgb(255, 145, 0);
+    font-weight: bold;
+    border: none;
+    margin: 5px;
+}
+.menu {
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9); /* Fundo escuro com transparência */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Começa invisível */
+        transform: scale(0.8); /* Começa menor */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        pointer-events: none; /* Evita cliques enquanto invisível */
+        z-index: 999999;
+    }
+    
+    /* Estilo dos links */
+    .menu ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .menu li {
+        margin: 20px 0;
+    }
+    
+    .menu a {
+        color: #04babf;
+        font-size: 24px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    /* Quando o menu está ativo */
+    .menu.show {
+        opacity: 1; /* Torna visível */
+        transform: scale(1); /* Cresce suavemente */
+        pointer-events: auto; /* Permite cliques */
+    }
+    
+    /* Botão de fechar */
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: #04babf;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1000000;
+    }
+    
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu a {
+    color: #04babf;
+    text-decoration: none;
+}
+
+/* Classe para exibir o menu */
+.menu.show {
+   
+    opacity: 1;
+    transform:scale(1);
+    pointer-events: auto; /* Permite cliques */
+    
+}
+
+.slider {
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    height: 300px; /* Altura do slider */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+   
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 2s ease-in-out; /* Faz a transição ser suave */
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1; /* Só a imagem ativa fica visível */
+}
+section{
+    margin: 10px;
+
+}
+.hero{
+    font-family: "Playpen Sans", cursive;
+    font-size: 2em;
+    color: #bf6c06;
+    animation: deslizar 1s ease-in-out;
+    
+}
+.card{
+    border-radius: 3px;
+    color: #bf6c06;
+    padding: 5px;
+}
+
+.depoimentos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+  }
+  .depoimento {
+    background: #ff5733;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+  }
+  .texte1  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+   
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .texte2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+   
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .texte3  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+   
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .texte4  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #04babf;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+   
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .footer {
+    background-color: #222; /* Cor de fundo escura */
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; /* Texto branco */
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  img{
+   
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    height: 300px; /* Altura do slider */
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed;
+  }
+  
+
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contato {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.mapa {
+  flex: 1;
+  padding-left: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <section class="contato">
+        <form>
+          <h2>Entre em Contato</h2>
+          <input type="text" placeholder="Nome">
+          <input type="email" placeholder="E-mail">
+          <textarea placeholder="Mensagem"></textarea>
+          <button>Enviar</button>
+        </form>
+        <div class="mapa">
+          <iframe src="https://maps.google.com" width="100%" height="300"></iframe>
+        </div>
+      </section>
+      
+</body>
+</html>
